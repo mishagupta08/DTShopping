@@ -44,6 +44,34 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -182,11 +210,18 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\stylesheet.css" />
+    <Content Include="ext\jquery\jquery-1.8.0.min.js" />
+    <Content Include="ext\jquery\ui\jquery-ui-1.8.22.min.js" />
+    <Content Include="ext\jquery\ui\redmond\jquery-ui-1.8.22.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -199,6 +234,60 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="unishop_theme\unishop_images\all-sliders-markers.png" />
+    <Content Include="unishop_theme\unishop_images\arrow-top.png" />
+    <Content Include="unishop_theme\unishop_images\bg_black_10.png" />
+    <Content Include="unishop_theme\unishop_images\icon-add-to.png" />
+    <Content Include="unishop_theme\unishop_images\icon-bestsellers.png" />
+    <Content Include="unishop_theme\unishop_images\icon-brands.png" />
+    <Content Include="unishop_theme\unishop_images\icon-cart-rollover.png" />
+    <Content Include="unishop_theme\unishop_images\icon-cart.png" />
+    <Content Include="unishop_theme\unishop_images\icon-category.png" />
+    <Content Include="unishop_theme\unishop_images\icon-info-contact.png" />
+    <Content Include="unishop_theme\unishop_images\icon-info-facebook.png" />
+    <Content Include="unishop_theme\unishop_images\icon-info-theme.png" />
+    <Content Include="unishop_theme\unishop_images\icon-info-twitter.png" />
+    <Content Include="unishop_theme\unishop_images\icon-manufacturers.png" />
+    <Content Include="unishop_theme\unishop_images\icon-new.png" />
+    <Content Include="unishop_theme\unishop_images\icon-phone.png" />
+    <Content Include="unishop_theme\unishop_images\icon-related.png" />
+    <Content Include="unishop_theme\unishop_images\icon-social-facebook.png" />
+    <Content Include="unishop_theme\unishop_images\icon-social-google.png" />
+    <Content Include="unishop_theme\unishop_images\icon-social-twitter.png" />
+    <Content Include="unishop_theme\unishop_images\icon-social-youtube.png" />
+    <Content Include="unishop_theme\unishop_images\icon-special.png" />
+    <Content Include="unishop_theme\unishop_images\label_new.png" />
+    <Content Include="unishop_theme\unishop_images\label_onsale.png" />
+    <Content Include="unishop_theme\unishop_images\label_options.png" />
+    <Content Include="unishop_theme\unishop_images\line-footer-list.gif" />
+    <Content Include="unishop_theme\unishop_images\marker_bc.gif" />
+    <Content Include="unishop_theme\unishop_images\newsletter-submit-button.png" />
+    <Content Include="unishop_theme\unishop_images\sale.png" />
+    <Content Include="unishop_theme\unishop_images\saveup.png" />
+    <Content Include="unishop_theme\unishop_images\search-submit-button.png" />
+    <Content Include="unishop_theme\unishop_images\select-icons1.png" />
+    <Content Include="unishop_theme\unishop_images\shopping_cart_mini_delete_button.png" />
+    <Content Include="unishop_theme\unishop_images\sider-markers.png" />
+    <Content Include="unishop_theme\unishop_images\twitter-item-bg.png" />
+    <Content Include="unishop_theme\unishop_js\cloud-zoom.1.0.2.js" />
+    <Content Include="unishop_theme\unishop_js\custom.js" />
+    <Content Include="unishop_theme\unishop_js\jquery-1.7.2.min.js" />
+    <Content Include="unishop_theme\unishop_js\jquery-ui.js" />
+    <Content Include="unishop_theme\unishop_js\jquery.easing.1.3.js" />
+    <Content Include="unishop_theme\unishop_js\jquery.elastislide.js" />
+    <Content Include="unishop_theme\unishop_js\jquery.jcarousel.min.js" />
+    <Content Include="unishop_theme\unishop_js\layerslider.kreaturamedia.jquery.js" />
+    <Content Include="unishop_theme\unishop_js\responsiveslides.js" />
+    <Content Include="unishop_theme\unishop_js\slider-dark.js" />
+    <Content Include="unishop_theme\unishop_js\slider-light.js" />
+    <Content Include="unishop_theme\unishop_styles\base.css" />
+    <Content Include="unishop_theme\unishop_styles\effects.css" />
+    <Content Include="unishop_theme\unishop_styles\layerslider.css" />
+    <Content Include="unishop_theme\unishop_styles\layout.css" />
+    <Content Include="unishop_theme\unishop_styles\light-theme.css" />
+    <Content Include="unishop_theme\unishop_styles\skeleton.css" />
+    <Content Include="unishop_theme\unishop_styles\sliders_styles.css" />
+    <Content Include="unishop_theme\unishop_styles\unishop.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
