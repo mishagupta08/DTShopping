@@ -57,11 +57,12 @@ function validate() {
 }
 
 
-jQuery(function() {
+jQuery(document).ready(function () {
+
     jQuery("#back-top").css({"bottom":jQuery("#footer").height()+150+"px"});
 
 
-    jQuery('#et_categ_box_scroll .cat-name').hover(
+    jQuery('#et_categ_box_scroll .cat-name').click(
         function(){ $('.drop-box-subcat',this).show() },
         function(){ $('.drop-box-subcat',this).hide() }
     );
